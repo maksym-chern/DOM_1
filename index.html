@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картка користувача</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <main class="page-container">
+        <article class="user-card" id="userCard">
+            
+            <header class="user-card__header">
+                <button class="user-card__like-btn" id="likeBtn" type="button" aria-label="Вподобати">
+                    <span class="user-card__like-icon">❤️</span>
+                </button>
+                <div class="user-card__avatar-wrapper">
+                    <img src="https://i.pravatar.cc/300?img=32" alt="Аватар Марії Коваленко" class="user-card__avatar">
+                </div>
+            </header>
+
+            <div class="user-card__body">
+                <div class="user-card__identity">
+                    <h1 class="user-card__name">Марія Коваленко</h1>
+                    <p class="user-card__username">@mariia_kovalenko</p>
+                </div>
+
+                <div class="user-card__meta">
+                    <span class="user-card__profession">Senior Frontend Developer</span>
+                    <span class="user-card__dob" title="Дата народження">14.08.1996</span>
+                </div>
+
+                <p class="user-card__bio">
+                    Створюю швидкі, доступні та масштабовані веб-інтерфейси. Захоплююсь чистою архітектурою коду, UI/UX дизайном та менторством.
+                </p>
+
+                <div class="user-card__contacts" id="contactsBlock">
+                    <p class="user-card__contact-item">
+                        <span class="user-card__contact-label">Email:</span>
+                        <a href="mailto:m.kovalenko@example.com" class="user-card__contact-link">m.kovalenko@example.com</a>
+                    </p>
+                    <p class="user-card__contact-item">
+                        <span class="user-card__contact-label">Тел:</span>
+                        <a href="tel:+380991234567" class="user-card__contact-link">+38 (099) 123-45-67</a>
+                    </p>
+                </div>
+
+                <div class="user-card__actions">
+                    <button class="btn btn--primary" id="followBtn" type="button">Підписатися</button>
+                    <button class="btn btn--secondary" id="toggleContactsBtn" type="button">Показати контакти</button>
+                </div>
+            </div>
+
+            <footer class="user-card__footer">
+                <nav class="user-card__nav" aria-label="Навігація профілю">
+                    <ul class="user-card__nav-list">
+                        <li class="user-card__nav-item">
+                            <a href="#profile" class="user-card__nav-link">Профіль</a>
+                        </li>
+                        <li class="user-card__nav-item">
+                            <a href="#posts" class="user-card__nav-link">Публікації</a>
+                        </li>
+                        <li class="user-card__nav-item">
+                            <a href="#projects" class="user-card__nav-link">Проєкти</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+
+        </article>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
