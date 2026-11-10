@@ -112,7 +112,7 @@ body {
     object-fit: cover;
 }
 
-/* Тіло картки */
+/* === Тіло картки === */
 .user-card__body {
     padding: 66px 24px 24px;
     text-align: center;
@@ -160,6 +160,7 @@ body {
     padding: 4px 10px;
     border-radius: 999px;
     border: 1px solid var(--border-color);
+    cursor: help;
 }
 
 .user-card__bio {
@@ -187,6 +188,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 }
 
 .user-card__contact-label {
@@ -204,7 +206,7 @@ body {
     color: var(--primary);
 }
 
-/* Кнопки */
+/*Кнопки */
 .user-card__actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -252,7 +254,7 @@ body {
     background-color: var(--secondary-hover);
 }
 
-/*Футер (Навігація) */
+/* Футер (Навігація) */
 .user-card__footer {
     border-top: 1px solid var(--border-color);
     background-color: #fafbfc;
