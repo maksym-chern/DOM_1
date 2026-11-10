@@ -60,6 +60,11 @@ function getYearWord(age) {
     return 'років';
 }
 
+function logUserAction(actionName) {
+    const timestamp = new Date().toLocaleTimeString('uk-UA');
+    console.log(`[LOG ${timestamp}] Користувач натиснув на посилання: «${actionName}»`);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Пункт 2: Логіка кнопки «Підписатися»
     const followBtn = document.getElementById('followBtn');
@@ -119,6 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             toggleContactsBtn.textContent = isVisible ? 'Приховати контакти' : 'Показати контакти';
             toggleContactsBtn.setAttribute('aria-expanded', String(isVisible));
+        });
+    }
+
+    // Пункт 6: Логування кліків через делегування подій
+    const navList = document.querySelector('.user-card__nav-list');
+
+    if (navList) {
+        navList.addEventListener('click', (event) => {
+            const link = event.target.closest('.user-card__nav-link');
+        
+            if (!link) return;
+
+            event.preventDefault();
+            logUserAction(link.textContent.trim());
         });
     }
 });
