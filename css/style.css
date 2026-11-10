@@ -112,7 +112,7 @@ body {
     object-fit: cover;
 }
 
-/* === Тіло картки === */
+/* Тіло картки */
 .user-card__body {
     padding: 66px 24px 24px;
     text-align: center;
@@ -206,6 +206,9 @@ body {
     color: var(--primary);
 }
 
+.user-card__contacts--hidden {
+    display: none;
+}
 /*Кнопки */
 .user-card__actions {
     display: grid;

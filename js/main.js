@@ -108,4 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
             dobEl.setAttribute('title', `Вік: ${age} ${getYearWord(age)}`);
         }
     }
+    // Пункт 5: Показати / Приховати контакти 
+    const toggleContactsBtn = document.getElementById('toggleContactsBtn');
+    const contactsBlock = document.getElementById('contactsBlock');
+
+    if (toggleContactsBtn && contactsBlock) {
+        toggleContactsBtn.addEventListener('click', () => {
+            const isHidden = contactsBlock.classList.toggle('user-card__contacts--hidden');
+            const isVisible = !isHidden;
+
+            toggleContactsBtn.textContent = isVisible ? 'Приховати контакти' : 'Показати контакти';
+            toggleContactsBtn.setAttribute('aria-expanded', String(isVisible));
+        });
+    }
 });
